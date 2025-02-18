@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Watches for Sale</h1>
+    <ul>
+        {% for watch in watches %}
+            <li>
+                <h2><a href="{{ url_for('singleProductPage', watchId=loop.index0) }}">{{ watch.name }}</a></h2>
+                <p>Pirce: {{ watch.price }}</p>
+                <p>{{ watch.description }}</p>
+                <img src="{{ url_for('static', filename=watch.image) }}" alt="{{ watch.name }}" width="150" height="150">
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>

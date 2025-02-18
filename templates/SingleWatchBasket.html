@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>{{ watch.name }}</h1>
+    <p>Price: {{ watch.price }}</p>
+    <p>Description: {{ watch.description }}</p>
+    <p>Your have added {{ opinion }} {{watch.name}} to your basket</p>
+    <img src="{{ url_for('static', filename=watch.image) }}" alt="{{ watch.name }}" width="380" height="380">
+</body>
+</html>
